@@ -1,0 +1,33 @@
+{
+  "name": "@k2_tools/utils",
+  "version": "0.0.9",
+  "description": "General javascript tools for web application development",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonemmott/k2-tools-utils.git"
+  },
+  "keywords": [
+    "javascript",
+    "utilities",
+    "utils",
+    "pipes",
+    "queues",
+    "url",
+    "string"
+  ],
+  "author": "Simon Emmott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonemmott/k2-tools-utils/issues"
+  },
+  "homepage": "https://github.com/simonemmott/k2-tools-utils#readme",
+  "devDependencies": {
+    "jest": "^28.1.3",
+    "jest-cli": "^28.1.3"
+  }
+}
