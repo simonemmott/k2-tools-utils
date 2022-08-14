@@ -25,6 +25,7 @@ describe("snakeCase", () => {
   
   it("replaces blank spaces with underscores in loweer case", () => {
     expect(snakeCase("a Big  brown Fox")).toEqual("a_big__brown_fox");
+    expect(snakeCase("  @a Big  brown Fox!  ")).toEqual("a_big__brown_fox");
   });
   
 });
@@ -33,6 +34,7 @@ describe("kebabCase", () => {
   
   it("replaces blank spaces with hyphens in lower case", () => {
     expect(kebabCase("a Big  brown Fox")).toEqual("a-big--brown-fox");
+    expect(kebabCase("  @a Big  brown Fox!  ")).toEqual("a-big--brown-fox");
   });
   
 });
@@ -41,6 +43,7 @@ describe("camelCase", () => {
   
   it("Captilized the first letter of each word and removed blank spaces", () => {
     expect(camelCase("a Big  brown Fox")).toEqual("ABigBrownFox");
+    expect(camelCase("  @a Big  brown Fox!  ")).toEqual("ABigBrownFox");
   });
   
 });
@@ -49,6 +52,7 @@ describe("aliasCase", () => {
   
   it("Captilized the first letter of each word and removed blank spaces with a lower case first letter", () => {
     expect(aliasCase("a Big  brown Fox")).toEqual("aBigBrownFox");
+    expect(aliasCase("  @a Big  brown Fox!  ")).toEqual("aBigBrownFox");
   });
   
 });
