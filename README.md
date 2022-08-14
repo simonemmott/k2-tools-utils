@@ -1,3 +1,6 @@
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/simonemmott/k2-tools-utils.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/simonemmott/k2-tools-utils/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/simonemmott/k2-tools-utils.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/simonemmott/k2-tools-utils/context:javascript)
+
 # K2 tools - Javascript Utilities
 This npm package is a set of general javascript tools developed to support web application development.
 
