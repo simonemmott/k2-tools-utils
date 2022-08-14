@@ -52,7 +52,7 @@ const pipe = pipes.pipe(consumer); // Create a pipe using the defined consumer
 ```
 
 Pipes can be costructed without a consumer. However, baisc pipes will throw an error
-if at item is submitted to the `aacept` method of the pipe if it does not have a
+if at item is submitted to the `accept` method of the pipe if it does not have a
 consumer to process the item accepted onto the pipe.
 
 ``` javascript
@@ -69,7 +69,7 @@ const pipe = pipes.pipe(); // Create a pipe without a consumer
 
 const consumer = (item) => {
   // ...
-  // Do something with each tiem subnmitted to the accept method of the pipe
+  // Do something with each item subnmitted to the accept method of the pipe
   // ...
   console.log(JSON.stringify(item);
 }; // Create a consumer function to handle items submitted to the pipe
@@ -112,7 +112,7 @@ const consumer = (item) => {
 const pipe = pipes.cachingPipe(consumer); // Create a caching pipe using the defined consumer
 ```
 
-Caching Pipes can be costructed without a consumer. Items submitted to the `aacept` method of the caching pipe
+Caching Pipes can be costructed without a consumer. Items submitted to the `accept` method of the caching pipe
 are cached while the pipe does not have a doncumer defined. As soon a a consumer is added to the pipe the
 cached items are submitted to the consumer in the order they were submitted to the `accept` methof of the 
 pipe. 
@@ -131,7 +131,7 @@ const pipe = pipes.cachingPipe(); // Create a caching pipe without a consumer
 
 const consumer = (item) => {
   // ...
-  // Do something with each tiem subnmitted to the accept method of the pipe
+  // Do something with each item subnmitted to the accept method of the pipe
   // ...
   console.log(JSON.stringify(item);
 }; // Create a consumer function to handle items submitted to the pipe
