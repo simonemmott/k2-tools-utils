@@ -8,19 +8,30 @@ const titleCase = (string) => {
 };
 
 const snakeCase = (string) => {
-  return string.toLowerCase().replace(/(\W)/g, "_");
+  return string.replace(/(\W)/g, " ")
+    .trim()
+    .toLowerCase()
+    .replace(/(\W)/g, "_");
+  
 };
 
 const kebabCase = (string) => {
-  return string.toLowerCase().replace(/(\W)/g, "-");
+  return string.replace(/(\W)/g, " ")
+    .trim()
+    .toLowerCase()
+    .replace(/(\W)/g, "-");
 };
 
 const camelCase = (string) => {
-  return titleCase(string).replace(/(\W)/g, "");
+  return string.replace(/(\W)/g, " ")
+    .trim()
+    .toLowerCase()
+    .replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+    .replace(/(\W)/g, "");
 };
 
 const aliasCase = (string) => {
-  string = titleCase(string).replace(/(\W)/g, "");
+  string = camelCase(string).replace(/(\W)/g, "");
   return string.charAt(0).toLowerCase() + string.slice(1);
 };
 
