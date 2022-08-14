@@ -25,6 +25,6 @@ const utils = {
     camelCase: camelCase,
     aliasCase: aliasCase
   }
-}
+};
 
 module.exports = utils;
