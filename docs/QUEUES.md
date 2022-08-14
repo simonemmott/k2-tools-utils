@@ -104,11 +104,11 @@ Queues offer several methods for dealing with items on the queue.
 
 ##### Next
 
-The `next()` method offered by a queue returns a Promise which resolves to the next item in the queeue when
+The `next()` method offered by a queue returns a Promise which resolves to the next item in the queue when
 it is available.
 
 Queued items can only be resolved by a single Promise. Therefore calling `next()` before the Promise for
-the previous item in the queue has resolved will cause the Promise returned bby the first call to `next()` to
+the previous item in the queue has resolved will cause the Promise returned by the first call to `next()` to
 never resolve.
 
 Calls to `next()` always return a Promise for the next item in the queue. Consequently calling next before
@@ -135,13 +135,13 @@ const QueuedItemHandler = ({queue}) => { // Create a React component to process 
 ```
 
 Using the `next()` method of a queue as above guarantees that each item in the queue will be processed one at a 
-tioe and in the same sequence which the items were accepted on to the queue.
+time and in the same sequence which the items were accepted on to the queue.
 
 ##### Size
 
 The `size()` method returns the number of items currently waiting on the queue
 
-``` javascriopt
+``` javascript
 const queue = queues.queue("A", "B", "C", "D"); // Createa a queue with 4 initial items
 
 console.log(queues.size()) // Logs 4
@@ -154,7 +154,7 @@ The `queued()` method returns true if there are items on the queue to read.
 ``` javascript
 const queue = queues.queue(); // Create an item with no initially queued items
 
-console.log(queue.size()); // Logs false - there a no items currently on the queue;
+console.log(queue.queued()); // Logs false - there a no items currently on the queue;
 ```
 
 ``` javascript
