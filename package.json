@@ -1,6 +1,6 @@
 {
   "name": "@k2_tools/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "General javascript tools for web application development",
   "main": "index.js",
   "scripts": {
