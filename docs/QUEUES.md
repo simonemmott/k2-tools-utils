@@ -137,6 +137,9 @@ const QueuedItemHandler = ({queue}) => { // Create a React component to process 
 Using the `next()` method of a queue as above guarantees that each item in the queue will be processed one at a 
 time and in the same sequence which the items were accepted on to the queue.
 
+Because the `next()` method returns a Promise is it safe to call the `next()` method even when there is nothing on
+the queue. The promise will resolve to the next item in the queue when an iten is accepted onto the queue.
+
 ##### Size
 
 The `size()` method returns the number of items currently waiting on the queue
