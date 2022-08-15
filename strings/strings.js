@@ -11,7 +11,6 @@ const titleCase = (string) => {
     lastCharWasBlank = (string[i].match(/\S/) === null);
   }
   return result;
-//  return string.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
 };
 
 const snakeCase = (string) => {
