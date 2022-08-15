@@ -4,7 +4,13 @@ const captializeFirstLetter = (string) => {
 };
 
 const titleCase = (string) => {
-  return string.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+  var lastCharWasBlank = true;
+  var result = "";
+  for (var i = 0; i<string.length; i++) {
+    result = result + (lastCharWasBlank ? string[i].toUpperCase() : string[i]);
+    lastCharWasBlank = (string[i].match(/\S/) === null);
+  }
+  return result;
 };
 
 const snakeCase = (string) => {
@@ -23,15 +29,14 @@ const kebabCase = (string) => {
 };
 
 const camelCase = (string) => {
-  return string.replace(/(\W)/g, " ")
-    .trim()
-    .toLowerCase()
-    .replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
-    .replace(/(\W)/g, "");
+  return titleCase(string.replace(/(\W)/g, " ")
+      .trim()
+      .toLowerCase()
+    ).replace(/(\W)/g, "");
 };
 
 const aliasCase = (string) => {
-  string = camelCase(string).replace(/(\W)/g, "");
+  string = camelCase(string);
   return string.charAt(0).toLowerCase() + string.slice(1);
 };
 
