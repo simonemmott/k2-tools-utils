@@ -5,7 +5,7 @@ const captializeFirstLetter = (string) => {
 
 const titleCase = (string) => {
   var lastCharWasBlank = true;
-  result = "";
+  var result = "";
   for (var i = 0; i<string.length; i++) {
     result = result + (lastCharWasBlank ? string[i].toUpperCase() : string[i]);
     lastCharWasBlank = (string[i].match(/\S/) === null);
