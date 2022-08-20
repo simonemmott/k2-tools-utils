@@ -33,6 +33,26 @@ import {queues} from "@k2_tools/utils";
 import {strings} from "@k2_tools/utils";
 ```
 
+#### [Effects](./docs/EFFECTS.md)
+``` javascript
+import {effects} from "@k2_tools/utils";
+```
+
+#### [Geometry](./docs/GEOMETRY.md)
+``` javascript
+import {geometry} from "@k2_tools/utils";
+```
+
+#### [SVG](./docs/SVG.md)
+``` javascript
+import {svg} from "@k2_tools/utils";
+```
+
+#### [Threads](./docs/THREADS.md)
+``` javascript
+import {threads} from "@k2_tools/utils";
+```
+
 
 ## Contributing
 
