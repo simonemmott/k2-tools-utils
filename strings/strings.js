@@ -31,7 +31,6 @@ const kebabCase = (string) => {
 const camelCase = (string) => {
   return titleCase(string.replace(/(\W)/g, " ")
       .trim()
-      .toLowerCase()
     ).replace(/(\W)/g, "");
 };
 
