@@ -1,5 +1,5 @@
 const noEffect = () => {};
 
-modeul.exports = {
+module.exports = {
   noEffect: noEffect
 }
